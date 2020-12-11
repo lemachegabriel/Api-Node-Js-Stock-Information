@@ -1,13 +1,17 @@
 const express = require('express');
+const stockController = require('./controllers/stockController');
 const routes = express.Router();
 
-const ativosControllers = require('./controllers/ativoController');
 
 
-routes.get('/ativos', ativosControllers.index);
-routes.get('/ativos/:id', ativosControllers.show);
-routes.post('/ativos', ativosControllers.store); 
-routes.put('/ativos/:id', ativosControllers.update);
-routes.delete('/ativos/:id', ativosControllers.destroy);
+
+routes.get('/stock', stockController.index);
+routes.get('/stock/:id', stockController.show);
+routes.post('/stock', stockController.store); 
+routes.put('/stock/:id', stockController.update);
+routes.delete('/stock/:id', stockController.destroy);
 
 module.exports = routes;
+
+
+
