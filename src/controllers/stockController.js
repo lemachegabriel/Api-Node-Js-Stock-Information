@@ -1,30 +1,30 @@
 const mongoose = require('mongoose');
 
-const ativo = mongoose.model('ativos')
+const stock = mongoose.model('stocks_information')
 
 module.exports = {
     async index(req, res) {
-        const ativos = await ativo.find();
+        const ativos = await stock.find();
 
         return res.json(ativos);
     },
     async show(req, res) {
-        const ativos = await ativo.findById(req.params.id);
+        const ativos = await stock.findById(req.params.id);
 
         return res.json(ativos)
     },
     async store(req, res) {
-        const ativos = await ativo.create(req.body);
+        const ativos = await stock.create(req.body);
 
         return res.json(ativos);
     },
     async update(req, res) {
-        const ativos = await ativo.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        const ativos = await stock.findByIdAndUpdate(req.params.id, req.body, {new: true});
 
         return res.json(ativos); 
     },
     async destroy(req, res) {
-        await ativo.findByIdAndRemove(req.params.id);
+        await stock.findByIdAndRemove(req.params.id);
 
         return res.send('excluido');
     }
