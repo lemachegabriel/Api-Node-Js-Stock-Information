@@ -10,17 +10,17 @@ app.use(cors())
 
 //////////////////////////////////////////////
 
-mongoose.connect("mongodb://localhost/dados", {useUnifiedTopology:true, useNewUrlParser:true}).then(() => {
-    console.log("conectado");
+mongoose.connect("mongodb://localhost/data", {useUnifiedTopology:true, useNewUrlParser:true}).then(() => {
+    console.log("sucsess");
 }).catch((err) => {
-    console.log("falha:"+err)
+    console.log("error:"+err)
 })
-require('./src/models/ativos')
+require('./src/models/stock')
 
 //////////////////////////////////////////////
 
 app.use("/api", require('./src/routes'));
 
 app.listen(8081, function(){
-    console.log("servidor rodando na url http://localhost:8081");
+    console.log("server running http://localhost:8081");
 });
