@@ -1,0 +1,26 @@
+{
+  "name": "site2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemachegabriel/site2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lemachegabriel/site2/issues"
+  },
+  "homepage": "https://github.com/lemachegabriel/site2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.6",
+    "nodemon": "^2.0.7"
+  }
+}
